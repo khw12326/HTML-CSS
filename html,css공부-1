@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .color-primary {
+          color: brown;
+      }  
+    </style>
+</head>
+<body>
+    <h1 class="color-primary">난 개</h1>
+    <p class="color-primary">난 빨강</p>
+    <p style="font: size 100px; ;">난 커</p>
+
+    <img 
+    width="200px"
+    src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MjFfMjYz%2FMDAxNjUwNTQxNjE1ODM3.0vrgQc2D0lkDb9JLgX1BUAdH8zY5vPjg7X8Lc6DpggIg.CK6_isxmBMR6uYVhVkw6Da1LY_B522ZciSLX_pU8w4sg.JPEG.misshugo%2FKakaoTalk_20220421_200645058_16.jpg&type=a340" alt="">
+    
+</body>
+</html>
