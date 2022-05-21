@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text">
+    <button type="button" onclick="javascript:alert('내가만든웹페이지')">여기를 클릭하시오</button>
+    <h1 class="color-primary font-100">웹페이지</h1>
+    <p style="font-size: 50px;">김현우</p>
+    <img
+    width="400px"
+    src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140415_49%2Fwandust_13975719779064hQmN_JPEG%2FNaverBlog_20140415_232618_20.jpg&type=a340">
+    
+    
+</body>
+</html>
