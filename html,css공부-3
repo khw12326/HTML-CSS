@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+
+    <p class="color-primiary font-50">난 도그</p>
+    <button type="button" onclick="javascript:alert('클릭해라')">Click</button>
+    <select>
+        <option>서울</option>
+        <option>제주도</option>
+    </select>
+    <input type="text">
+    <input type="number">
+    
+
+    <img 
+    width="200px"
+    src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MjFfMjYz%2FMDAxNjUwNTQxNjE1ODM3.0vrgQc2D0lkDb9JLgX1BUAdH8zY5vPjg7X8Lc6DpggIg.CK6_isxmBMR6uYVhVkw6Da1LY_B522ZciSLX_pU8w4sg.JPEG.misshugo%2FKakaoTalk_20220421_200645058_16.jpg&type=a340" alt="">
+    
+</body>
+<style>
+    body{
+  /* background-repeat : 반복조절 */
+  background-image: url('https://th.bing.com/th/id/R.8ecb637e841228bcb45a179e93f7406a?rik=j%2fI4RR0vAUMsbQ&riu=http%3a%2f%2fcfile204.uf.daum.net%2fimage%2f2424894851D641A90D1929&ehk=bJWS3GbsLeq9Nh5P9gy0zDvJcIpInJTLgr%2byOH3PbgA%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+/*   background-position: top; */
+}
+
+</style>
+</html>
