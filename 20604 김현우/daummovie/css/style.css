@@ -1,0 +1,209 @@
+* { box-sizing: border-box; }
+html, body {
+	margin: 0;
+	width: 100%;
+}
+.video-header {
+	position: relative;
+	width: 100%;
+	height: 730px;
+	overflow: hidden;
+}
+.video-header video {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);	
+	left: 0;
+}
+.wrap {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1100px;
+	height: 800px;
+}
+.gnb_movie {
+	position: relative;
+	width: 100%;
+	height: 50px;
+}
+.gnb_movie > ul {
+	list-style: none;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+.gnb_movie ul > li {
+	width: auto;
+	padding: 0 20px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	text-align: left;
+}
+.gnb_movie ul > li > a {
+	font-size: 30px;
+	color: white;
+	font-weight: 500;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #333;
+}
+.gnb_movie ul > li > ul {
+	padding: 0;
+	white-space: nowrap;
+	list-style: none;
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	display: none;
+}
+
+.gnb_movie ul > li > ul > li {
+	width: auto;
+	display: inline-block;
+	text-align: left;
+}
+.gnb_movie ul > li > ul > li > a {
+	width: auto;
+	font-size: 17px;
+	color: white;
+	font-weight: 100;
+	text-decoration: none;
+}
+.main {
+	width: 100%;
+	height: 363px;
+	margin-top: 410px;	
+	position: relative;
+}
+.slide-box {
+	width: 100%;
+	height: 363px;
+	overflow: hidden;
+	position: relative;
+}
+.slide-box .slide:first-child {
+	left: 0;
+}
+.slide-box .slide {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 363px;
+	display: flex;
+	justify-content: space-between;
+}
+.slide-box .slide .card {
+	position: relative;
+	width: 204px;
+	height: 363px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.slide-box .slide .card .info {
+	width: 204px;
+	height: 298px;
+	background-color: #333;
+}
+.slide-box .slide .card .title {
+	width: 100%;
+	height: 65px;
+	line-height: 65px;
+	text-align: center;
+}
+.slide-box .slide .card .info .poster {
+	width: 204px;
+	height: 298px;
+	position: relative;
+}
+.slide-box .slide .card .info .poster img {
+	width: 100%;
+	height: 298px;
+}
+.slide-box .slide .card .info .poster span {
+	display: block;
+	position: absolute;
+	color: white;
+}
+.slide-box .slide .card .info .poster span.number {
+	top: 6px;
+	left: 15px;
+	font-size: 40px;
+	font-style: italic;
+	font-weight: 500;
+}
+.slide-box .slide .card .info .poster span.rate {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	bottom: 0;
+	left: 0;
+	font-size: 15px;
+	font-weight: 500;
+	text-align: center;
+	background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+.slide-box .slide .card .info .detail {
+	width: 204px;
+	height: 298px;
+	position: relative;
+	background-color: #333;
+	color: white;
+	padding: 20px 10px;
+	display: none;
+}
+.slide-box .slide .card .info .detail .credit {
+	width: 100%;
+	height: 298px;
+}
+.slide-box .slide .card .info .detail .credit table {
+	font-size: 13px;
+	width: 100%;
+}
+.slide-box .slide .card .info .detail .credit table tr th, .slide-box .slide .card .info .credit table tr td {
+	vertical-align: top;
+}
+.slide-box .slide .card .info .detail .credit table tr th {
+	width: 50px;
+	color: #888;
+}
+.slide-box .slide .card .info .detail .more {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	bottom: 0;
+	left: 0;
+	font-size: 15px;
+	font-weight: 500;
+	text-align: center;
+	background: black;
+}
+
+.slide-btn {
+	width: 56px;
+	height: 56px;
+	background: url(../images/icons.png);
+	position: absolute;
+	top: 140px;
+	z-index: 9999;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.slide-left {
+	background-position: 0 0;
+	left: -28px;
+}
+.slide-right {
+	background-position: -60px 0;
+	right: -28px;
+}
+.slide-left:hover {
+	left: -35px;
+}
+.slide-right:hover {
+	right: -35px;
+}

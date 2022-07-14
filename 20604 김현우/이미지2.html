@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이미지2</title>
+<style>
+	body {
+		background: url(http://webskills.kr/web/wood.jpg);
+	}
+	.photos { margin-top: 20px; }
+	.photos div {
+		position: relative;
+		top: 50px;
+		width: 180px;
+		height: 230px;
+		display: inline-block;
+		margin: 10px;
+		transition: 0.3s;
+		background-color: white;
+		border: 10px solid white;
+	}
+	.photos div p {
+		text-align: center;
+		font-size: 20px;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-top: 5px;
+	}
+	.img-1 { transform: rotate(10deg); }
+	.img-2 { transform: rotate(-10deg); }
+	.img-3 { transform: rotate(20deg); }
+	.img-4 { transform: rotate(-20deg); }
+	.img-5 { transform: rotate(10deg); }
+
+	.photos div:hover {
+		top: 0;
+		opacity: 0.7;
+	}
+</style>
+</head>
+<body>
+	<div class="photos">
+		<div class="img-1">
+			<img src="http://placeimg.com/180/180/nature" alt="nature">
+			<p>nature</p>
+		</div>
+		<div class="img-2">
+			<img src="http://placeimg.com/180/180/animals" alt="animals">
+			<p>animals</p>
+		</div>
+		<div class="img-3">
+			<img src="http://placeimg.com/180/180/people" alt="people">
+			<p>people</p>
+		</div>
+		<div class="img-4">
+			<img src="http://placeimg.com/180/180/tech" alt="tech">
+			<p>tech</p>
+		</div>
+		<div class="img-5">
+			<img src="http://placeimg.com/180/180/arch" alt="arch">
+			<p>arch</p>
+		</div>
+	</div>
+
+</body>
+</html> 

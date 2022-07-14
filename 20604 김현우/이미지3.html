@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이미지3</title>
+<style>
+	#photos div {
+		display: inline-block;
+		width: 150px;
+		height: 150px;
+		border: 5px solid #ccf;
+		background-color: #eef;
+		position: relative;
+	}
+	#photos div img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 100%;
+		max-height: 100%;
+		cursor: pointer;
+	}
+	#modal {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.8);
+		transition: 0.3s;
+		display: none;
+	}
+	#modal span {
+		display: block;
+		width: 50px;
+		height: 50px;
+		font-size: 40px;
+		color: white;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+	#modal img {
+		position: absolute;
+		max-width: 100%;
+		max-height: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+</style>
+</head>
+<body>
+<h1>모달(Modal) 이미지</h1>
+<p>modal : 어떤 창이 팝업되었을 때, 그 창을 닫기 전까지는 다른 요소들에 접근할 수 없도록 만들어지는 창</p>
+<div id="photos">
+    <div><img onclick="viewModal(this.src)" src="http://placeimg.com/800/600/nature" alt="nature"></div>
+    <div><img onclick="viewModal(this.src)" src="http://placeimg.com/800/800/animals" alt="animals"></div>
+    <div><img onclick="viewModal(this.src)" src="http://placeimg.com/500/800/people" alt="people"></div>
+</div>
+<div id="modal">
+	<span onclick="closeModal()">&times;</span>
+	<img id="modalimg" src="" alt="modal image">
+</div>
+<script>
+	function viewModal(src) {
+		document.querySelector("#modalimg").src = src;
+		document.querySelector("#modal").style.display = "block";
+	}
+	function closeModal() {
+		document.querySelector("#modalimg").src = "";
+		document.querySelector("#modal").style.display = "none";
+	}
+</script>
+</body>
+</html> 
