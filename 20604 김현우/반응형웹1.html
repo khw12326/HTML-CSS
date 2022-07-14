@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; }
+	.header {
+		background-color: #999;
+		color: #fff;
+		padding: 15px;
+		text-align: center;
+	}
+	.row > div { float: left; padding: 15px; }
+	.row .col-3 { width: 25%; }
+	.row .col-6 { width: 50%; }
+	.menu { background-color: #ccc; }
+	.menu ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.menu li {
+		padding: 8px;
+		margin-bottom: 7px;
+		background-color: #33B5E5;
+		color: #fff;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	}
+	.menu li:hover {
+		background-color: #09c;
+	}
+	.aside {
+		background-color: #33B5E5;
+		padding: 15px;
+		color: white;
+	}
+	.footer {
+		clear: both;
+		background-color: #09c;
+		color: white;
+		text-align: center;
+		padding: 15px;
+	}
+	.content { background-color: burlywood; }
+
+	@media only screen and (max-width: 600px) {
+		.row .col-3, .row .col-6 {
+			width: 100%;
+			padding: 15px 0;
+		}
+		.header { background-color: #93c; }
+	}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="col-6 content">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+  </div>
+
+  <div class="col-3">
+    <div class="aside">
+      <h2>What?</h2>
+      <p>Chania is a city on the island of Crete.</p>
+      <h2>Where?</h2>
+      <p>Crete is a Greek island in the Mediterranean Sea.</p>
+      <h2>How?</h2>
+      <p>You can reach Chania airport from all over Europe.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</body>
+</html>

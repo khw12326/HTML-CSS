@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>슬라이드2</title>
+<style>
+	#slider {
+		width: 800px;
+		height: 300px;
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#slider img {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 800px;
+		height: 300px;
+	}
+	#slider img:first-child {
+		left: 0;
+	}
+</style>
+<body>
+<div id="slider" onclick="//playSlide()">
+	<img class="slide" src="http://placeimg.com/800/300/nature" alt="nature">
+	<img class="slide" src="http://placeimg.com/800/300/animals" alt="animals">
+	<img class="slide" src="http://placeimg.com/800/300/people" alt="people">
+	<img class="slide" src="http://placeimg.com/800/300/tech" alt="tech">
+	<img class="slide" src="http://placeimg.com/800/300/arch" alt="arch">
+</div>
+<script>
+	let slides = document.getElementsByClassName("slide");
+	let sno = 0;
+	let lastNo = slides.length - 1;
+	let firstStart = 0;
+	let firstEnd = -100;
+	let secondStart = 100;
+	let secondEnd = 0;
+	function playSlide() {
+		playSlide1(sno);
+		sno++;
+		if( sno > lastNo ) sno = 0;
+		playSlide2(sno);
+	}
+	function playSlide1(no) {
+		let slide = slides[no];
+		slide.style.left = firstStart + "%";
+		if( slide.style.left == firstEnd + "%" ) {
+			firstStart = 0;
+			slide.style.left = "100%";
+			return;
+		}
+		setTimeout(function(){
+			firstStart--;
+			playSlide1(no);
+		}, 10);
+	}
+
+	function playSlide2(no) {
+		let slide = slides[no];
+		slide.style.left = secondStart + "%";
+		if( slide.style.left == secondEnd + "%" ) {
+			secondStart = 100;
+			return;
+		}
+		setTimeout(function(){
+			secondStart--;
+			playSlide2(no);
+		}, 10);
+	}
+	let timer = setInterval(function(){
+		playSlide();
+	},3000);
+</script>
+</body>
+<html>

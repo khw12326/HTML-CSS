@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>슬라이드 jQuery-3</title>
+<style>
+	#slider {
+		width: 800px;
+		height: 300px;
+		position: relative;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#slider img {
+		position: absolute;
+		top: -100%;
+		left: 0;
+		width: 800px;
+		height: 300px;
+	}
+	#slider img:first-child {
+		top: 0;
+	}
+</style>
+<body>
+<div id="slider" onclick="//playSlide()">
+	<img class="slide" src="http://placeimg.com/800/300/nature" alt="nature">
+	<img class="slide" src="http://placeimg.com/800/300/animals" alt="animals">
+	<img class="slide" src="http://placeimg.com/800/300/people" alt="people">
+	<img class="slide" src="http://placeimg.com/800/300/tech" alt="tech">
+	<img class="slide" src="http://placeimg.com/800/300/arch" alt="arch">
+</div>
+<script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+	let slides = $("#slider img");
+	let sno = 0;
+	let lastNo = slides.length - 1;
+
+	function playSlide() {
+		$(slides[sno]).animate({
+			top: "100%"
+		},1000,function(){
+			$(this).css("top", "-100%");
+		});
+		sno++;
+		if( sno > lastNo ) sno = 0;
+		$(slides[sno]).animate({
+			top: "0"
+		},1000);
+	}
+
+	let timer = setInterval(function(){
+		playSlide();
+	}, 2000);
+
+</script>
+</body>
+<html>
